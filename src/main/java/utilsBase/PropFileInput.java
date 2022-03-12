@@ -11,7 +11,7 @@ public class PropFileInput extends Constants {
 	public static FileInputStream fileInput;
 	
 	
-	public FileInputStream fileReturn() {
+	public static FileInputStream fileReturn() {
 		try {
 			fileInput = new FileInputStream(new Constants().returnPath());
 		} catch (FileNotFoundException e) {
@@ -20,7 +20,7 @@ public class PropFileInput extends Constants {
 		return fileInput;
 	}
 	
-	public Properties returnProp() {
+	public static Properties returnProp() {
 		prop = new Properties();
 		try {
 			prop.load(fileReturn());
@@ -31,7 +31,7 @@ public class PropFileInput extends Constants {
 		return prop;
 	}
 	
-	public String retrunpropVal() {
-		return prop.getProperty("browser");
+	public static String retrunpropVal(String val) {
+		return prop.getProperty(val);
 	}
 }
