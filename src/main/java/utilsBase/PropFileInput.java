@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class BaseClass extends Constants {
+public class PropFileInput extends Constants {
 	
 	public static Properties prop;
 	public static FileInputStream fileInput;
