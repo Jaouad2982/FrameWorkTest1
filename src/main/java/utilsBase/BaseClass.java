@@ -13,15 +13,15 @@ public class BaseClass extends PropFileInput{
 	public WebDriver returnDriver() {
 		String val = PropFileInput.retrunpropVal("browser");
 		if(val.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromiumdriver().setup();
+			WebDriverManager.chromedriver().setup();;
 			driver = new ChromeDriver();
 		}
 		if(val.equalsIgnoreCase("firefox")) {
-			WebDriverManager.chromiumdriver().setup();
+			WebDriverManager.firefoxdriver().setup();
 			driver = new ChromeDriver();
 		}
 		if(val.equalsIgnoreCase("edge")) {
-			WebDriverManager.chromiumdriver().setup();
+			WebDriverManager.edgedriver().setup();
 			driver = new ChromeDriver();
 		}
 		return driver;
