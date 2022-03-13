@@ -10,7 +10,6 @@ public class PropFileInput extends Constants {
 	public static Properties prop;
 	public static FileInputStream fileInput;
 	
-	
 	public static FileInputStream fileReturn() {
 		try {
 			fileInput = new FileInputStream(new Constants().returnPath());
@@ -31,7 +30,7 @@ public class PropFileInput extends Constants {
 		return prop;
 	}
 	
-	public static String retrunpropVal(String val) {
+	public static String returnpropVal(String val) {
 		return prop.getProperty(val);
 	}
 }

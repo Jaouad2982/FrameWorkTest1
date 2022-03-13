@@ -12,7 +12,7 @@ public class LoginPage {
 	@FindBy(id="txtPassword")
 	WebElement password;
 	
-	LoginPage(WebDriver driver){
+	public LoginPage(WebDriver driver){
 		PageFactory.initElements(driver, this);
 	}
 	
