@@ -10,7 +10,7 @@ public class BaseClass extends PropFileInput{
 	
 	public static WebDriver driver;
 	
-	public WebDriver returnDriver() {
+	public static WebDriver returnDriver() {
 		String val = PropFileInput.retrunpropVal("browser");
 		if(val.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();;

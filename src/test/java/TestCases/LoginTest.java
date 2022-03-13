@@ -1,8 +1,18 @@
 package TestCases;
 
-import pages.Pages;
+import org.testng.annotations.Test;
 
-public class LoginTest{
+import pages.Pages;
+import utilsBase.BaseClass;
+
+public class LoginTest extends BaseClass{
 	// to be con
-	Pages p = new Pages(driver);
+	
+	Pages p = new Pages(BaseClass.returnDriver());
+	
+	@Test
+	public void OpenPage() {
+		
+	}
+	
 }
