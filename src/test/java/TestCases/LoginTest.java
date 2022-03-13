@@ -7,19 +7,23 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.Pages;
 import utilsBase.BaseClass;
+import utilsBase.CommonMethods;
 
 public class LoginTest extends BaseClass{
 	// to be con
 	public static WebDriver driver = BaseClass.returnDriver();
 	LoginPage login = new LoginPage(driver);
+	CommonMethods comMethods = new CommonMethods();
+	
 	
 	@Test(dataProvider="getData")
 	public void login(String name,String password) {	
 		driver = BaseClass.returnDriver();
 		BaseClass.getURL();
 		driver.manage().window().maximize();
-		login.getUserName().sendKeys(name);;
-		login.getPassword().sendKeys(password);
+		CommonMethods.enterValue(login.getUserName(), name);
+		CommonMethods.enterValue(login.getPassword(), password);
+
 				
 	}
 	
