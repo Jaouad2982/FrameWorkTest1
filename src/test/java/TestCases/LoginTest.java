@@ -23,8 +23,6 @@ public class LoginTest extends BaseClass{
 		driver.manage().window().maximize();
 		CommonMethods.enterValue(login.getUserName(), name);
 		CommonMethods.enterValue(login.getPassword(), password);
-
-				
 	}
 	
 	@DataProvider(name="getData")
